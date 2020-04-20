@@ -78,6 +78,7 @@ ul {
 #logo {
 	width: 500px;
 	margin-left: 100px;
+	align-self: center;
 }
 
 #logo_wrap {

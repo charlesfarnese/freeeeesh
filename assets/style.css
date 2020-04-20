@@ -541,7 +541,7 @@ ul {
 }
 
 /* tablet res/below horizontal ipad */
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1400px) {
 	
 	#left-col,
 	#right-col {
@@ -558,14 +558,17 @@ ul {
 	}
 
 	#mid-col {
-		-webkit-box-flex: 0 0 90%;
-	    -ms-flex: 0 0 90%;
-	    flex: 0 0 90%;
-	    max-width: 90%;
+		-webkit-box-flex: 0 0 768px;
+	    -ms-flex: 0 0 720px;
+	    flex: 0 0 720px;
+	    max-width: 720px;
 		position: relative;
-	    width: 90%;
 	    min-height: 1px;
 	    
+	}
+
+	.main-row {
+		justify-content: center;
 	}
 
 	#next_delivery-container,

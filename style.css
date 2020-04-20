@@ -1,0 +1,525 @@
+html {
+	scroll-snap-type: y mandatory;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: 'Source Serif Pro', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+	list-style-type: none;
+	margin-bottom: 0;
+	padding-inline-start: 0;
+}
+
+/* Core structure desktop */
+.col-12 {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.container {
+	max-width: 1900px;
+}
+
+/*.main-row {
+	flex-wrap: nowrap;
+}
+
+.left-col,
+.right-col {
+	flex: 0 0 360px;
+    max-width: 360px;
+}
+
+.mid-col {
+	flex: 0 0 960px;
+    max-width: 960px;
+}*/
+
+/* End core structure desktop */
+
+
+/* Initial Panel */
+
+#initial {
+    padding: 25px;
+}
+
+#initial_inner {
+	padding: 25px;
+    margin-top: 100px;
+}
+
+#initial_header {
+	display:flex;
+}
+
+#initial_header_left {
+	width: 50%;
+}
+
+#initial_header_right {
+	width: 50%;
+	text-align: right;
+}
+
+#logo_wrap {
+	display: flex;
+    justify-content: center;
+}
+
+#logo {
+	width: 500px;
+	margin-left: 100px;
+}
+
+#logo_wrap {
+	margin-bottom: 48px;
+}
+
+#featured_by {
+	text-align: center;
+	padding: 70px 0;
+}
+
+#offset {
+	margin-left: 50px;
+}
+
+#supplier_logos {
+	margin-bottom: 54px;
+}
+
+.suppliers_line > img {
+	max-width: 180px;
+}
+
+.suppliers_line {
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#suppliers_line1 {
+	margin-bottom: 32px;
+}
+
+#initial_headline {
+	text-align: center;
+	border-top: 2px solid #000000;
+	border-bottom: 2px solid #000000;
+	padding: 24px 0;
+}
+
+#initial_headline_line1 {
+	font-size: 40px;
+}
+
+#initial_headline_line2 {
+	font-size: 60px;
+}
+
+#initial_headline_line3 {
+	font-size: 35px;
+}
+
+#initial_headline_line4 {
+	font-size: 28px;
+}
+
+#initial_description {
+	text-align: center;
+	padding: 24px 0;
+}
+
+#initial_description_inner {
+	max-width: 920px;
+    margin: 0 auto;
+    font-size: 22px;
+}
+
+/* End initial panel*/
+
+/* Start items */
+
+.itemgroup {
+	margin-bottom: 30px;
+}
+
+.restaurant {
+	font-family: 'Nanum Myeongjo', serif;
+    font-size: 24px;
+}
+
+.itemtype_headline  .itemtype_english {
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.itemtype_headline  .itemtype_japanese {
+	margin-right: 10px;
+}
+
+.itemtype_headline > div,
+.itemtype_title > div {
+	display: inline-block;
+}
+
+.itemtype_title {
+	cursor: pointer;
+}
+
+.itemtype_headline .price_line {
+	float: right;
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	/*border: 1px solid #000000;
+	border-radius: 50%;
+	height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align:center;*/
+}
+
+.plus,
+.minus {
+	width: 16px;
+}
+
+.plus_container,
+.minus_container {
+	height: 40px;
+	cursor: pointer;
+	display: inline-block;
+	visibility:hidden;
+}
+
+.price {
+	margin: 0 10px;
+}
+
+.itemlist {
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	font-weight: 100;
+}
+/* End items*/
+
+/* Start right column */
+
+#last_col-container {
+	margin-top: 50px;
+}
+
+#info-container {
+	display: inline-block;
+    text-align: right;
+}
+
+#info-container > p {
+	margin-bottom: 5px;
+    line-height: 1;
+}
+
+#box_scroll-container {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	display:flex;
+	margin-left: 55px;
+	margin-top: 170px;
+	cursor: pointer;
+}
+
+#box_scroll-text {
+	margin-bottom: 30px;
+	letter-spacing: 2px
+}
+
+#box_scroll-arrow {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+
+
+/* End right column */
+
+/* Start basket and next delivery */
+
+#first_col-container {
+	position:sticky;
+	top: 40px;
+	flex-direction: column;
+    display: flex;
+}
+
+#next_delivery-container {
+	margin-bottom: 30px;
+}
+
+#next_delivery-text {
+	display: inline-block;
+    margin-right: 30px;
+    float:right;
+}
+
+#basket_container {
+	position: relative;
+}
+
+#basket_link-container {
+    text-align: right;
+}
+
+#basket_link,
+#basket_inner-link {
+	transform: rotate(-180deg);
+    writing-mode: vertical-rl;
+    float:right;
+    font-size: 24px;
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#basket_inner-link {
+	position: absolute;
+	left: -30px;
+}
+
+#basket {
+	max-width:280px;
+	width: 100%;
+	margin: 0 0 0 auto;
+	padding: 0 0 20px 20px;
+	position: absolute;
+    right: 0px;
+	top: 10%;
+	display:none;
+}
+
+.basket_group {
+	margin-bottom: 30px;
+}
+
+.basket_group-restaurant {
+	text-align: right;
+	font-family: 'Nanum Myeongjo', serif;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+
+.basket_group-itemline {
+	display: flex;
+	align-items: baseline;            
+  	margin-bottom: 10px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	font-weight: 100;
+}
+
+.basket_group-itemline-dots {
+	flex: 1;                          
+  	overflow: hidden;  
+}
+
+.basket_total {
+	text-align: right;
+	font-size: 24px;
+}
+
+.basket_total-amount {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+}
+
+.basket_group-itemline-clear {
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 1279px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* End basket */
+
+.row {
+}
+
+.sep-symbol {
+	margin: 0 14px;
+}
+
+.menu {
+	height: calc(100vh - 110px);
+	position:sticky;
+	top: 110px;
+	width: 50%;
+	padding: 20px;
+}
+
+.panel {
+	display:flex;
+    margin: 0 auto;
+}
+
+.pictures {
+	overflow: hidden;
+	width: 50%;
+	padding: 20px;
+}
+
+.pictures_inner {
+	margin: 0 auto;
+	max-width: 360px;
+}
+
+.pictures_inner img {
+	max-width: 100%;
+}
+
+.col-6 {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.panel_head_sticky {
+	position: sticky;
+	top: 0px;
+	padding: 24px 0;
+	z-index:1;
+	background-color: #ffffff;
+    margin: 0 auto;
+}
+
+#menu_head {
+	text-align:center;
+
+}
+
+#menu_head-text {
+	background-color: #ffffff;
+	letter-spacing: 22px;
+	font-size: 24px;
+}
+
+#menu_head-text:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  border-top: 2px solid black;
+  background: black;
+  width: 30%;
+  transform: translateY(-50%);
+}
+
+#menu_head-text:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  border-top: 2px solid black;
+  background: black;
+  width: 30%;
+  transform: translateY(-50%);
+}
+
+#menu0 {
+	border-right: 2px solid #000000;
+}
+
+#menu0 .menu-inner {
+	max-width: 360px;
+	margin: 0 auto;
+}
+
+#pictures0 {
+
+}
+
+#menu1 {
+	background-color: #fffff0;
+	text-align: right;
+	padding:120px;
+	justify-content: flex-end;
+}
+
+#menu1 .menu-inner {
+	align-self: flex-end;
+}
+
+.restaurant img {
+	width: 180px;
+	margin-bottom: 5px;
+}
+
+#meat_header {
+	margin-bottom: 60px;
+}
+
+#meat_list {
+	margin-bottom: 40px;
+}
+
+#meat_list li {
+	margin: 20px 0;
+}
+
+.meat_price {
+	margin-left: 60px;
+}
+
+#menu2 {
+	background-color: #ffffff;
+	padding: 90px 150px;
+	justify-content: center;
+}
+
+#menu2 .menu-inner {
+	text-align: center;
+}
+
+#menu2 .menu-inner .sub-menu {
+	margin-bottom: 40px;
+}
+
+#veg_list {
+	text-align: center;
+}
+
+#veg_list li {
+	margin: 30px 0;
+}
+
+#menu3 {
+	background-color: pink;
+}
+
+
+#pictures1 {
+	height: 2400px;
+}
+
+#pictures2 {
+	background-color: #1c1c1c;
+	height: 2400px;
+	color: #313131;
+}
+
+#pictures3 {
+	background-color: #1c1c1c;
+	height: 2400px;
+	color: #313131;
+}

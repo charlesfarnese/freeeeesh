@@ -558,10 +558,10 @@ ul {
 	}
 
 	#mid-col {
-		-webkit-box-flex: 0 0 768px;
-	    -ms-flex: 0 0 720px;
-	    flex: 0 0 720px;
-	    max-width: 720px;
+		-webkit-box-flex: 0 0 690px;
+	    -ms-flex: 0 0 690px;
+	    flex: 0 0 690px;
+	    max-width: 690px;
 		position: relative;
 	    min-height: 1px;
 	    
@@ -602,4 +602,18 @@ ul {
 	#basket_inner {
 		margin-left: 20px;
 	}
+}
+
+@media only screen and (max-width: 768px) {
+	
+	#mid-col {
+		-webkit-box-flex: 0 0 90%;
+	    -ms-flex: 0 0 90%;
+	    flex: 0 0 90%;
+	    max-width: 90%;
+		position: relative;
+	    min-height: 1px;
+	    
+	}
+
 }

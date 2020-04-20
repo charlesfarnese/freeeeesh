@@ -13,7 +13,7 @@ new CircleType(document.getElementById('next_delivery-date'))
 $(document).ready(function(){
     $('#basket_link').click(function() {
         console.log($(window).width());
-        if ($(window).width() >= 1280) {
+        if ($(window).width() >= 1024) {
             $('#basket_link').css("display","none");
             $('#basket_link-inner').fadeIn(1000).css("display","block");
             $('#basket').fadeIn(1000).css("display","block");

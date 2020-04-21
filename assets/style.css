@@ -138,6 +138,7 @@ ul {
 	font-size: 50px;
     letter-spacing: 3px;
     font-weight: 700;
+    line-height: 1.2;
 }
 
 #initial_headline_line3 {
@@ -657,7 +658,7 @@ ul {
 	}
 
 	#last_col-container {
-     	margin-top: 40px;
+     	margin-top: 82px;
 	}
 
 	#basket_link {

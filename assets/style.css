@@ -52,9 +52,7 @@ ul {
 }
 
 #initial_inner {
-	padding: 25px;
     margin-top: 100px;
-    padding-bottom: 0;
 }
 
 #initial_header {
@@ -410,6 +408,7 @@ ul {
 	z-index:1;
 	background-color: #ffffff;
     margin: 0 auto;
+    padding-bottom: 38px;
 }
 
 #menu_head {
@@ -424,28 +423,32 @@ ul {
 	height: 1px;
     align-self: center;
     background-color: #000000;
-    margin: 0 40px;
+    margin: 0 20px;
 }
 
 #menu_head-text {
 	background-color: #ffffff;
-	letter-spacing: 22px;
-	font-size: 24px;
+	letter-spacing: 16px;
+	padding-left: 16px;
+	font-size: 16px;
 }
 
 #head_text-box {
 	font-weight: 700;
 }
 
+#head_text-menu {
+	font-weight: 400;
+}
+
 #left_text-date {
 	position: absolute;
-	left: 40px;
 }
 
 #right_text-freeeeesh {
 	position: absolute;
-	right: 40px;
-    top: 40px;
+	right: 20px;
+    top: 28px;
 }
 
 /*#menu_head-text:before {

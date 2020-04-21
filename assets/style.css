@@ -75,12 +75,11 @@ ul {
 
 #logo {
 	width: 500px;
-	margin-left: 100px;
 	align-self: center;
 }
 
 #logo_wrap {
-	margin-bottom: 48px;
+	margin-bottom: 26px;
 }
 
 #featured_by {
@@ -245,7 +244,7 @@ ul {
 	text-orientation: upright;
 	display:flex;
 	margin-left: 55px;
-	margin-top: 280px;
+	margin-top: 180px;
 	cursor: pointer;
 }
 
@@ -261,7 +260,7 @@ ul {
 
 #box_scroll-arrow img {
 	align-self: center;
-	height: 100px;
+	height: 120px;
 }
 
 

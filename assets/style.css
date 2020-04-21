@@ -97,7 +97,7 @@ ul {
 }
 
 .suppliers_line > img {
-	max-width: 180px;
+	max-width: 150px;
 }
 
 .suppliers_line {
@@ -160,16 +160,21 @@ ul {
 .restaurant {
 	font-family: 'Nanum Myeongjo', serif;
     font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.itemtype_headline {
+	margin-bottom: 16px;
 }
 
 .itemtype_headline  .itemtype_english {
 	font-family: 'Raleway', sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 300;
 }
 
 .itemtype_headline  .itemtype_japanese {
-	margin-right: 10px;
+	margin-right: 5px;
 }
 
 .itemtype_headline > div,
@@ -196,12 +201,12 @@ ul {
 
 .plus,
 .minus {
-	width: 16px;
+	width: 12px;
 }
 
 .plus_container,
 .minus_container {
-	height: 40px;
+	height: 30px;
 	cursor: pointer;
 	display: inline-block;
 	visibility:hidden;
@@ -209,11 +214,12 @@ ul {
 
 .price {
 	margin: 0 10px;
+	font-size: 20px;
 }
 
 .itemlist {
 	font-family: 'Raleway', sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 100;
 }
 /* End items*/
@@ -221,7 +227,7 @@ ul {
 /* Start right column */
 
 #last_col-container {
-	margin-top: 70px;
+	margin-top: 50px;
 }
 
 #info-container {
@@ -239,7 +245,7 @@ ul {
 	text-orientation: upright;
 	display:flex;
 	margin-left: 55px;
-	margin-top: 170px;
+	margin-top: 280px;
 	cursor: pointer;
 }
 
@@ -251,7 +257,11 @@ ul {
 #box_scroll-arrow {
 	display: flex;
 	justify-content: center;
+}
+
+#box_scroll-arrow img {
 	align-self: center;
+	height: 100px;
 }
 
 
@@ -272,8 +282,10 @@ ul {
 
 #next_delivery-text {
 	display: inline-block;
-    margin-right: 30px;
+    margin-right: 56px;
     float:right;
+    position: relative;
+    margin-bottom: 50px;
 }
 
 #next_delivery-date {
@@ -298,6 +310,10 @@ ul {
     letter-spacing: 2px;
     cursor: pointer;
     white-space: nowrap;
+}
+
+#basket_link {
+	margin-right: 38px;
 }
 
 #basket_inner-link {
@@ -372,7 +388,7 @@ ul {
 	position:sticky;
 	top: 110px;
 	width: 50%;
-	padding: 20px;
+	padding: 0 20px 20px 20px;
 	border-right: 1px solid #000000;
 }
 
@@ -384,12 +400,12 @@ ul {
 .pictures {
 	overflow: hidden;
 	width: 50%;
-	padding: 20px;
+	padding: 40px;
 }
 
 .pictures_inner {
 	margin: 0 auto;
-	max-width: 360px;
+	max-width: 246px;
 }
 
 .pictures_inner img {
@@ -495,7 +511,7 @@ ul {
 }
 
 .restaurant img {
-	width: 180px;
+	width: 100px;
 	margin-bottom: 5px;
 }
 
@@ -609,6 +625,14 @@ ul {
 	#next_delivery-container,
 	#info-container {
 		display: none;
+	}
+
+	#last_col-container {
+     	margin-top: 40px;
+	}
+
+	#basket_link {
+		margin-right: 0;
 	}
 
 	#box_scroll-container {

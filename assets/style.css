@@ -100,7 +100,16 @@ ul {
 }
 
 .suppliers_line > img {
-	max-width: 150px;
+	max-width: 120px;
+}
+
+
+#suppliers_line2 > img {
+	max-width: 75px;
+}
+
+#fr_laundry {
+	max-width: 220px;
 }
 
 .suppliers_line {
@@ -110,7 +119,7 @@ ul {
 }
 
 #suppliers_line1 {
-	margin-bottom: 32px;
+	margin-bottom: 26px;
 }
 
 #initial_headline {
@@ -419,6 +428,7 @@ ul {
 	overflow: hidden;
 	width: 50%;
 	padding: 40px;
+	font-weight: 100;
 }
 
 .pictures_inner {

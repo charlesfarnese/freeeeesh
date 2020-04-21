@@ -469,7 +469,7 @@ $(".itemtype_title").click( function () {
   }
 );
 
-// Add to basket itemlist
+// Add to basket via itemlist
 $(".itemlist").click( function () {
     
     // get product
@@ -572,6 +572,10 @@ $(".itemlist").click( function () {
     
   }
 );
+
+// Close mobile basket on scroll
+
+
 
 
 

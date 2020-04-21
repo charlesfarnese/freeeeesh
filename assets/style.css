@@ -676,7 +676,7 @@ ul {
 	    background-color: rgb(255, 255, 255);
 	    top: 40px;
 	    padding: 30px;
-	    min-height: 140px;
+	    min-height: 180px;
 	    border: 1px solid rgb(0, 0, 0);
 	    max-width: 300px;
 	    margin-left: 20px;
@@ -684,7 +684,7 @@ ul {
 
 	#basket_inner-link {
 		left: 0;
-		top: 2px;
+		top: 40px;
 	}
 
 	#basket_inner {

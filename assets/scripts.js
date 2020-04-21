@@ -469,6 +469,110 @@ $(".itemtype_title").click( function () {
   }
 );
 
+// Add to basket itemlist
+$(".itemlist").click( function () {
+    
+    // get product
+    var product = $(this).parent().data("product");
+
+    // get price
+    var price = $(this).siblings(".itemtype_headline").find(".price").first().text();
+
+    // get restaurant
+    var restaurant = $(this).parent().data("restaurant");
+    
+    // get current product count
+    //  will get from cart api
+
+    var newBasketGroup = '<div class="basket_group" data-restaurant="' + restaurant + '"><div class="basket_group-restaurant">' + restaurant + '</div><div class="basket_group-itemline"><div class="basket_group-itemline-clear">x</div><div class="basket_group-itemline-title">' + product + '</div><div class="basket_group-itemline-dots">.............................................................................................................................................................</div><div class="basket_group-itemline-cost">£<span class="basket_group-itemline-cost-number">' + price + '</span></div></div></div>';
+
+    var newItemLine = '<div class="basket_group-itemline"><div class="basket_group-itemline-clear">x</div><div class="basket_group-itemline-title">' + product + '</div><div class="basket_group-itemline-dots">.............................................................................................................................................................</div><div class="basket_group-itemline-cost">£<span class="basket_group-itemline-cost-number">' + price + '</span></div></div>'
+
+    //get basket groups
+    var basketGroups = $(".basket_group");
+
+    
+    // Check if restaurant in has group already
+    var restaurantInBasket = false;
+
+    $(basketGroups).each(function(index, element){
+
+        if ($(this).data("restaurant") === restaurant) {
+            restaurantInBasket = true;
+        }
+    });
+    console.log(restaurantInBasket);
+
+
+
+    // add new group or line depending if restaurant has group
+    if (restaurantInBasket == true) {
+
+        // get group and append item
+        $('.basket_group[data-restaurant="' + restaurant + '"').eq(0).append(newItemLine);
+
+
+    } else {
+        //append to basket
+        $('#basket_groups').append(newBasketGroup);
+
+    }
+
+    //update/create itemcount div
+    // new restaurant group list 
+    var restaurantItemList = $('.basket_group[data-restaurant="' + restaurant + '"').find(".basket_group-itemline-title");
+
+    //filter list for this product
+    var restaurantItemListFiltered = $(restaurantItemList).filter( function () {
+            return $(this).text() == product;
+    });
+
+    console.log(restaurantItemList.length);
+    console.log(restaurantItemListFiltered.length);
+
+    // if lenght is greater than 0, show count div and list linght
+    if (restaurantItemListFiltered.length >= 1) {
+
+        // check if count div exists, if so update count, else prepend count div
+        var countDiv = $('.itemgroup[data-restaurant="' + restaurant + '"][data-product="' + product + '"]').find(".number_in-basket");
+
+        if (countDiv.length == 1) {
+
+            $(countDiv).text(restaurantItemListFiltered.length);
+
+        } else {
+
+            var countDivNew = '<div class="itemtype_in-basket"><span class="number_in-basket">' + restaurantItemListFiltered.length + '</span> x</div>';
+            console.log(countDivNew);
+
+            $('.itemgroup[data-restaurant="' + restaurant + '"][data-product="' + product + '"]').find(".itemtype_title").prepend(countDivNew);
+
+        }
+
+    }
+
+
+
+    // get basket count from number of itemlines
+    var basketCount = $('.basket_group-itemline').length;
+    $("#basket_link_inner-count").text(basketCount);
+    $("#basket_link-count").text(basketCount);
+
+
+    // update basket total price
+    var itemLinesPrices = $("#basket").find(".basket_group-itemline-cost-number");
+
+    var total = 0;
+    $(itemLinesPrices).each(function () {
+        total += parseInt($(this).text(), 10);
+    });
+
+    $("#basket_total-number").text(total);
+
+    
+  }
+);
+
 
 
 

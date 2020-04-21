@@ -26,6 +26,10 @@ ul {
 	max-width: 1900px;
 }
 
+.justified {
+	text-align: justify;
+}
+
 /*.main-row {
 	flex-wrap: nowrap;
 }
@@ -203,6 +207,10 @@ ul {
 	width: 12px;
 }
 
+.minus {
+	height: 1px;
+}
+
 .plus_container,
 .minus_container {
 	height: 30px;
@@ -220,6 +228,7 @@ ul {
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	font-weight: 100;
+	cursor: pointer;
 }
 /* End items*/
 
@@ -304,11 +313,19 @@ ul {
 	transform: rotate(-180deg);
     writing-mode: vertical-rl;
     float:right;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Nanum Myeongjo', serif;
     letter-spacing: 2px;
     cursor: pointer;
     white-space: nowrap;
+}
+
+#basket_link {
+	margin-top: 40px;
+}
+
+#basket_inner-link {
+	top: 40px;
 }
 
 #basket_link {
@@ -338,8 +355,9 @@ ul {
 .basket_group-restaurant {
 	text-align: right;
 	font-family: 'Nanum Myeongjo', serif;
-	font-size: 24px;
+	font-size: 18px;
 	margin-bottom: 10px;
+	font-weight: 700;
 }
 
 
@@ -348,7 +366,7 @@ ul {
 	align-items: baseline;            
   	margin-bottom: 10px;
 	font-family: 'Raleway', sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 100;
 }
 
@@ -405,6 +423,7 @@ ul {
 .pictures_inner {
 	margin: 0 auto;
 	max-width: 246px;
+	font-family: 'Raleway', sans-serif;
 }
 
 .pictures_inner img {
@@ -673,6 +692,10 @@ ul {
 		position: relative;
 	    min-height: 1px;
 	    
+	}
+
+	.suppliers_line > img {
+    	max-width: 120px;
 	}
 
 }

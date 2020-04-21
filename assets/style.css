@@ -413,8 +413,18 @@ ul {
 }
 
 #menu_head {
-	text-align:center;
+	display:flex;
+	justify-content: center;
+	text-align: center;
 
+}
+
+.menu_head-line {
+	flex: 1;
+	height: 1px;
+    align-self: center;
+    background-color: #000000;
+    margin: 0 40px;
 }
 
 #menu_head-text {
@@ -423,7 +433,22 @@ ul {
 	font-size: 24px;
 }
 
-#menu_head-text:before {
+#head_text-box {
+	font-weight: 700;
+}
+
+#left_text-date {
+	position: absolute;
+	left: 40px;
+}
+
+#right_text-freeeeesh {
+	position: absolute;
+	right: 40px;
+    top: 40px;
+}
+
+/*#menu_head-text:before {
   content: '';
   position: absolute;
   top: 50%;
@@ -443,7 +468,7 @@ ul {
   background: black;
   width: 30%;
   transform: translateY(-50%);
-}
+}*/
 
 
 #menu0 .menu-inner {

@@ -138,13 +138,13 @@ ul {
 
 #initial_description {
 	text-align: center;
-	padding: 24px 0 0 0;
+	padding: 30px 0 0 0;
 }
 
 #initial_description_inner {
-	max-width: 920px;
+	max-width: 680px;
     margin: 0 auto;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Nanum Myeongjo', serif;
 }
 

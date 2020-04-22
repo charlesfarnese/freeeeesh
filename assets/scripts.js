@@ -9,6 +9,19 @@ $( document ).ready(function() {
 new CircleType(document.getElementById('next_delivery-date'))
   .radius(70);
 
+// // Close mobile basket on click out
+$(document).ready(function(){
+    document.addEventListener('scroll', function(event) {
+        var basket = document.getElementById("basket");
+
+            if ($("#basket").css("display") === "block" && $("#basket").css("position") === "fixed") {
+                $("#basket").css("display", "none");
+                $('#basket_link').fadeIn(1000).css("display","block");
+            }
+
+    });
+});
+
 // basket fade in
 $(document).ready(function(){
     $('#basket_link').click(function() {
@@ -573,7 +586,10 @@ $(".itemlist").click( function () {
   }
 );
 
-// Close mobile basket on scroll
+
+
+
+
 
 
 

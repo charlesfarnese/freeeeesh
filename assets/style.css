@@ -357,6 +357,12 @@ ul {
     right: 0px;
 	top: 10%;
 	display:none;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .basket_group {
@@ -526,6 +532,7 @@ ul {
     -ms-user-select: none;
     user-select: none;
 }
+
 
 #menu0 .menu-inner {
 	max-width: 360px;

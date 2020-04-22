@@ -22,6 +22,19 @@ $(document).ready(function(){
     });
 });
 
+document.addEventListener('click', function(event) {
+        var basket = document.getElementById("basket");
+        var basketLink = document.getElementById("basket_link");
+        var clickInBasket = basket.contains(event.target);
+        var clickInBasketLink = basketLink.contains(event.target);
+
+            if (!clickInBasket && !clickInBasketLink && $("#basket").css("display") === "block" && $("#basket").css("position") === "fixed") {
+                $("#basket").css("display", "none");
+                $('#basket_link').fadeIn(1000).css("display","block");
+            }
+
+    });
+
 // basket fade in
 $(document).ready(function(){
     $('#basket_link').click(function() {
@@ -139,7 +152,7 @@ $(".plus_container").click( function () {
             var countDivNew = '<div class="itemtype_in-basket"><span class="number_in-basket">' + restaurantItemListFiltered.length + '</span> x</div>';
             console.log(countDivNew);
 
-            $('.itemgroup[data-restaurant="' + restaurant + '"][data-product="' + product + '"]').find(".itemtype_title").prepend(countDivNew);
+            $('.itemgroup[data-restaurant="' + restaurant + '"][data-product="' + product + '"]').find(".itemtype_headline").prepend(countDivNew);
 
         }
 
@@ -454,7 +467,7 @@ $(".itemtype_title").click( function () {
             var countDivNew = '<div class="itemtype_in-basket"><span class="number_in-basket">' + restaurantItemListFiltered.length + '</span> x</div>';
             console.log(countDivNew);
 
-            $('.itemgroup[data-restaurant="' + restaurant + '"][data-product="' + product + '"]').find(".itemtype_title").prepend(countDivNew);
+            $('.itemgroup[data-restaurant="' + restaurant + '"][data-product="' + product + '"]').find(".itemtype_headline").prepend(countDivNew);
 
         }
 
@@ -558,7 +571,7 @@ $(".itemlist").click( function () {
             var countDivNew = '<div class="itemtype_in-basket"><span class="number_in-basket">' + restaurantItemListFiltered.length + '</span> x</div>';
             console.log(countDivNew);
 
-            $('.itemgroup[data-restaurant="' + restaurant + '"][data-product="' + product + '"]').find(".itemtype_title").prepend(countDivNew);
+            $('.itemgroup[data-restaurant="' + restaurant + '"][data-product="' + product + '"]').find(".itemtype_headline").prepend(countDivNew);
 
         }
 

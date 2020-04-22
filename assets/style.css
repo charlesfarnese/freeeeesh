@@ -447,6 +447,11 @@ ul {
 
 .pictures_inner img {
 	max-width: 100%;
+	margin-bottom: 50px;
+}
+
+.rp_text {
+	margin-bottom: 50px;
 }
 
 .col-6 {

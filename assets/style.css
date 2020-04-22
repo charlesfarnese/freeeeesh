@@ -289,8 +289,6 @@ ul {
 /* Start basket and next delivery */
 
 #first_col-container {
-	position:sticky;
-	top: 40px;
 	flex-direction: column;
     display: flex;
 }
@@ -420,8 +418,6 @@ ul {
 
 .menu {
 	height: calc(100vh - 110px);
-	position:sticky;
-	top: 110px;
 	width: 50%;
 	padding: 0 20px 20px 20px;
 	border-right: 1px solid #000000;
@@ -460,9 +456,7 @@ ul {
 	padding-left: 0;
 }
 
-.panel_head_sticky {
-	position: sticky;
-	top: 0px;
+#panel_head_sticky {
 	padding: 24px 0;
 	z-index:1;
 	background-color: #ffffff;

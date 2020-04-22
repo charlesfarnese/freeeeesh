@@ -601,6 +601,11 @@ $(".itemlist").click( function () {
   }
 );
 
+// Sticky tits
+stickybits('#panel_head_sticky', {stickyBitStickyOffset: 0}, {scrollEl: 'box_scroll-target'});
+stickybits('#first_col-container', {stickyBitStickyOffset: 40}, {scrollEl: 'left-col'});
+stickybits('.menu', {stickyBitStickyOffset: 110}, {scrollEl: 'split-columns'});
+
 
 
 

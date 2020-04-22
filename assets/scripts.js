@@ -9,7 +9,7 @@ $( document ).ready(function() {
 new CircleType(document.getElementById('next_delivery-date'))
   .radius(70);
 
-// // Close mobile basket on click out
+
 $(document).ready(function(){
     document.addEventListener('scroll', function(event) {
         var basket = document.getElementById("basket");
@@ -22,18 +22,20 @@ $(document).ready(function(){
     });
 });
 
-document.addEventListener('click', function(event) {
-        var basket = document.getElementById("basket");
-        var basketLink = document.getElementById("basket_link");
-        var clickInBasket = basket.contains(event.target);
-        var clickInBasketLink = basketLink.contains(event.target);
+// document.addEventListener('click', function(event) {
+//         var basket = document.getElementById("basket");
+//         var basketLink = document.getElementById("basket_link");
+//         var clearItem = document.getElementsByClassName("basket_group-itemline-clear")
+//         var clickInBasket = basket.contains(event.target);
+//         var clickInBasketLink = basketLink.contains(event.target);
+//         var clickClearItem = clearItem.contains(event.target);
 
-            if (!clickInBasket && !clickInBasketLink && $("#basket").css("display") === "block" && $("#basket").css("position") === "fixed") {
-                $("#basket").css("display", "none");
-                $('#basket_link').fadeIn(1000).css("display","block");
-            }
+//             if (!clickInBasket && !clickInBasketLink && !clickClearItem && $("#basket").css("display") === "block" && $("#basket").css("position") === "fixed") {
+//                 $("#basket").css("display", "none");
+//                 $('#basket_link').fadeIn(1000).css("display","block");
+//             }
 
-    });
+//     });
 
 // basket fade in
 $(document).ready(function(){

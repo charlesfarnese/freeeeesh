@@ -192,7 +192,7 @@ ul {
 
 .itemtype_headline > div,
 .itemtype_title > div {
-	display: inline-block;
+	display: inline-flex;
 }
 
 .itemtype_title {
@@ -260,6 +260,7 @@ ul {
 
 #box_scroll-container {
 	writing-mode: vertical-rl;
+	-webkit-text-orientation: upright;
 	text-orientation: upright;
 	display:flex;
 	margin-left: 55px;

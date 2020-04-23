@@ -601,11 +601,24 @@ $(".itemlist").click( function () {
   }
 );
 
-// Sticky tits
+//Sticky tits
 stickybits('#panel_head_sticky', {stickyBitStickyOffset: 0}, {scrollEl: 'box_scroll-target'});
 stickybits('#first_col-container', {stickyBitStickyOffset: 40}, {scrollEl: 'left-col'});
 stickybits('.menu', {stickyBitStickyOffset: 110}, {scrollEl: 'split-columns'});
 
+// $(document).ready(function(){
+//     $('.panel').scroll(function(){
+//         var textDiff = $('.menu_inner').height() - $('.menu').height();
+//         console.log(textDiff);
+//         var textDiffRatio = (1 / textDiff) * $('.menu').scrollTop();
+//         console.log(textDiffRatio);
+//         var photosDiff = $('.pictures_inner').height() - $('.pictures').height();
+//         console.log(photosDiff);
+//         var photosScrollTop = textDiffRatio * photosDiff;
+//         console.log(photosScrollTop);
+//         $('.pictures').scrollTop(photosScrollTop);
+//     });
+// });
 
 
 

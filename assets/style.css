@@ -749,7 +749,9 @@ ul {
 
 .menu_image-mobile {
 	text-align: center;
+	display: none;
 }
+
 
 .menu_image-mobile img {
 	max-width: 80%;
@@ -912,6 +914,10 @@ ul {
 	}
 
 	.itemtype_headline .itemtype_in-basket {
+		display: block;
+	}
+
+	.menu_image-mobile {
 		display: block;
 	}
 

@@ -911,4 +911,8 @@ ul {
 		margin-left: 10%;
 	}
 
+	.itemtype_headline .itemtype_in-basket {
+		display: block;
+	}
+
 }

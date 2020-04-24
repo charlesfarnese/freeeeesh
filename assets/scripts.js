@@ -1,13 +1,15 @@
 $( document ).ready(function() {
     // get basket count from number of itemlines
     var basketCount = $('.basket_group-itemline').length;
-    $("#basket_link_inner-count").text(basketCount);
-    $("#basket_link-count").text(basketCount);
+    $(".basket_link-count").text(basketCount);
 });
 
 // curve next delivery text
 new CircleType(document.getElementById('next_delivery-date'))
-  .radius(70);
+  .radius(60);
+
+  new CircleType(document.getElementById('next_delivery-date-mobile'))
+  .radius(60);
 
 
 $(document).ready(function(){
@@ -16,7 +18,9 @@ $(document).ready(function(){
 
             if ($("#basket").css("display") === "block" && $("#basket").css("position") === "fixed") {
                 $("#basket").css("display", "none");
-                $('#basket_link').fadeIn(1000).css("display","block");
+                if ($(window).width() > 660) {
+                    $('#basket_link').fadeIn(1000).css("display","block");
+                }
             }
 
     });
@@ -53,7 +57,18 @@ $(document).ready(function(){
     $('#basket_link-inner').click(function() {
           $('#basket_link-inner').css("display","none");
           $('#basket').css("display","none");
-          $('#basket_link').fadeIn(1000).css("display","block");
+          if ($(window).width() > 660) {
+            $('#basket_link').fadeIn(1000).css("display","block");
+        }
+    });
+});
+
+//mobile basket open 
+$(document).ready(function(){
+    $('#basket_link_mobile').click(function() {
+            $('#left-col').css("visibility","visible");
+            $('#basket_link-inner').fadeIn(1000).css("display","block");
+            $('#basket').fadeIn(1000).css("display","block");
     });
 });
 
@@ -163,8 +178,7 @@ $(".plus_container").click( function () {
 
    	// get basket count from number of itemlines
     var basketCount = $('.basket_group-itemline').length;
-    $("#basket_link_inner-count").text(basketCount);
-    $("#basket_link-count").text(basketCount);
+    $(".basket_link-count").text(basketCount);
 
 
     // update basket total price
@@ -291,8 +305,7 @@ $(".minus_container").click( function () {
 
    	// get basket count from number of itemlines
     var basketCount = $('.basket_group-itemline').length;
-    $("#basket_link_inner-count").text(basketCount);
-    $("#basket_link-count").text(basketCount);
+    $(".basket_link-count").text(basketCount);
 
 });
 
@@ -373,8 +386,7 @@ $("body").on( "click", ".basket_group-itemline-clear", function() {
 
     // get basket count from number of itemlines
     var basketCount = $('.basket_group-itemline').length;
-    $("#basket_link_inner-count").text(basketCount);
-    $("#basket_link-count").text(basketCount);
+    $(".basket_link-count").text(basketCount);
 
 
 });
@@ -479,8 +491,7 @@ $(".itemtype_title").click( function () {
 
     // get basket count from number of itemlines
     var basketCount = $('.basket_group-itemline').length;
-    $("#basket_link_inner-count").text(basketCount);
-    $("#basket_link-count").text(basketCount);
+    $(".basket_link-count").text(basketCount);
 
 
     // update basket total price
@@ -583,8 +594,7 @@ $(".itemlist").click( function () {
 
     // get basket count from number of itemlines
     var basketCount = $('.basket_group-itemline').length;
-    $("#basket_link_inner-count").text(basketCount);
-    $("#basket_link-count").text(basketCount);
+    $(".basket_link-count").text(basketCount);
 
 
     // update basket total price
@@ -605,20 +615,6 @@ $(".itemlist").click( function () {
 stickybits('#panel_head_sticky', {stickyBitStickyOffset: 0}, {scrollEl: 'box_scroll-target'});
 stickybits('#first_col-container', {stickyBitStickyOffset: 40}, {scrollEl: 'left-col'});
 stickybits('.menu', {stickyBitStickyOffset: 110}, {scrollEl: 'split-columns'});
-
-// $(document).ready(function(){
-//     $('.panel').scroll(function(){
-//         var textDiff = $('.menu_inner').height() - $('.menu').height();
-//         console.log(textDiff);
-//         var textDiffRatio = (1 / textDiff) * $('.menu').scrollTop();
-//         console.log(textDiffRatio);
-//         var photosDiff = $('.pictures_inner').height() - $('.pictures').height();
-//         console.log(photosDiff);
-//         var photosScrollTop = textDiffRatio * photosDiff;
-//         console.log(photosScrollTop);
-//         $('.pictures').scrollTop(photosScrollTop);
-//     });
-// });
 
 
 

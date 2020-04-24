@@ -59,6 +59,11 @@ ul {
     margin-top: 100px;
 }
 
+#initial_inner-mobile {
+	display: none;
+	margin-bottom: 40px;
+}
+
 #initial_header {
 	display:flex;
 }
@@ -78,8 +83,20 @@ ul {
 }
 
 #logo {
-	width: 400px;
+	max-width: 400px;
 	align-self: center;
+}
+
+#logo_wrap-mobile {
+	display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+#logo-mobile {
+	max-width: 220px;
+    align-self: center;
+    padding-left: 20px;
 }
 
 #logo_wrap {
@@ -99,9 +116,34 @@ ul {
 	margin-bottom: 54px;
 }
 
+.suppliers_line {
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .suppliers_line > img {
 	max-width: 120px;
 }
+
+.suppliers_line#suppliers_line1-mobile {
+	margin: 40px 0 20px;
+}
+
+.suppliers_line#suppliers_line1-mobile > img,
+.suppliers_line#suppliers_line2-mobile > img {
+	max-width: 60px;
+}
+
+.suppliers_line#suppliers_line1-mobile > img {
+	max-width: 80px;
+}
+
+#suppliers_line2-mobile {
+	justify-content: space-evenly;
+}
+
+
 
 
 #suppliers_line2 > img {
@@ -112,11 +154,7 @@ ul {
 	max-width: 220px;
 }
 
-.suppliers_line {
-	display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
+
 
 #suppliers_line1 {
 	margin-bottom: 26px;
@@ -150,6 +188,37 @@ ul {
 	font-size: 20px;
 }
 
+#initial_headline-mobile {
+	text-align: center;
+	padding: 24px 0;
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+#initial_headline_line1-mobile {
+	font-size: 24px;
+}
+
+#initial_headline_line2-mobile {
+	font-size: 44px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+#initial_headline_line3-mobile {
+	font-size: 17px;
+    font-weight: 700;
+}
+
+#initial_headline_line4-mobile {
+	font-size: 14px;
+}
+
+#initial_headline_line5-mobile {
+	font-size: 14px;
+	padding: 20px 0 0 0;
+}
+
 #initial_description {
 	text-align: center;
 	padding: 30px 0 0 0;
@@ -160,6 +229,18 @@ ul {
     margin: 0 auto;
     font-size: 16px;
     font-family: 'Nanum Myeongjo', serif;
+}
+
+#initial_description_inner-mobile {
+	max-width: 100%;
+    margin: 0 auto;
+	font-size: 14px;
+	text-align: justify;
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+#initial_description_inner-mobile p {
+	text-align-last: center;
 }
 
 /* End initial panel*/
@@ -204,6 +285,7 @@ ul {
 	font-family: 'Raleway', sans-serif;
 	font-size: 22px;
 	font-weight: 300;
+	line-height: 1;
 	/*border: 1px solid #000000;
 	border-radius: 50%;
 	height: 40px;
@@ -307,6 +389,17 @@ ul {
 
 #next_delivery-date {
 	font-weight: 700;
+}
+
+#next_delivery-text-mobile {
+	position: relative;
+	margin-top:30px;
+}
+
+#next_delivery-date-mobile {
+	position: absolute;
+    top: -30px;
+    left: 50%;
 }
 
 #basket_container {
@@ -470,6 +563,7 @@ ul {
 	display:flex;
 	justify-content: center;
 	text-align: center;
+	align-items: center;
 
 }
 
@@ -635,6 +729,32 @@ ul {
     margin-left: 20px;
 }
 
+#basket_link_mobile-container {
+	flex: 1;
+	text-align: right;
+	display: none;
+}
+
+#basket_link_mobile {
+	display: inline-block;
+	cursor:pointer;
+}
+
+#mobile_date {
+	flex: 1;
+	text-align: left;
+	display: none;
+	letter-spacing: 2px;
+}
+
+.menu_image-mobile {
+	text-align: center;
+}
+
+.menu_image-mobile img {
+	max-width: 80%;
+}
+
 /* tablet res/below horizontal ipad */
 @media only screen and (max-width: 1400px) {
 	
@@ -725,6 +845,70 @@ ul {
 
 	.suppliers_line > img {
     	max-width: 120px;
+	}
+
+}
+
+@media only screen and (max-width: 660px) {
+
+	#initial_inner {
+		display: none;
+	}
+
+	#initial_inner-mobile {
+		display: block;
+	}
+
+	#left-col {
+		visibility: hidden;
+		width:1px;
+	}
+
+	#mid-col {
+		flex: 0 0 80;
+    	max-width: 80%;
+	}
+
+	#last_col-container {
+	margin-top: 0;
+	}
+
+	#box_scroll-container {
+		margin: 0 auto;
+    	margin-top: 30px;
+	}
+
+	.menu_head-line {
+		display: none;
+	}
+
+	#basket_link_mobile-container,
+	#mobile_date {
+		display: block;
+	}
+
+	.pictures {
+		display: none;
+	}
+
+	.menu {
+		width: 100%;
+		border-right: none;
+		padding: 0;
+		margin-bottom: 60px;
+	}
+
+	.restaurant {
+		text-align: center;
+    	margin: 40px 0;
+	}
+
+	#basket_link {
+		display: none;
+	}
+
+	#basket {
+		margin-left: 10%;
 	}
 
 }

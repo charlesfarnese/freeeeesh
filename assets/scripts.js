@@ -16,7 +16,7 @@ $(document).ready(function(){
     document.addEventListener('scroll', function(event) {
         var basket = document.getElementById("basket");
 
-            if ($("#basket").css("display") === "block" && $("#basket").css("position") === "fixed") {
+            if ($("#basket").css("display") === "block") {
                 $("#basket").css("display", "none");
                 if ($(window).width() > 660) {
                     $('#basket_link').fadeIn(1000).css("display","block");

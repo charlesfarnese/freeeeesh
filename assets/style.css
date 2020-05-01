@@ -938,6 +938,10 @@ a:visited {
 		display: block;
 	}
 
+	.suppliers_line#suppliers_line1-mobile > img {
+    	max-width: 60px;
+	}
+
 }
 
 @media only screen and (max-width: 900px) {

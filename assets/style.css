@@ -16,6 +16,14 @@ ul {
 	padding-inline-start: 0;
 }
 
+a,
+a:hover,
+a:focus,
+a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
 /* Core structure desktop */
 .col-12 {
 	max-width: 960px;
@@ -499,6 +507,14 @@ ul {
 	cursor: pointer;
 }
 
+#checkout_button {
+    padding: 8px 24px;
+    float: right;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    margin-top: 24px;
+}
+
 
 /* End basket */
 
@@ -912,6 +928,7 @@ ul {
 	#basket {
 		margin-left: 10%;
 	}
+
 
 	.itemtype_headline .itemtype_in-basket {
 		display: block;

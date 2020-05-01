@@ -123,7 +123,7 @@ ul {
 }
 
 .suppliers_line > img {
-	max-width: 120px;
+	max-width: 100px;
 }
 
 .suppliers_line#suppliers_line1-mobile {
@@ -147,7 +147,7 @@ ul {
 
 
 #suppliers_line2 > img {
-	max-width: 75px;
+	max-width: 100px;
 }
 
 #fr_laundry {
@@ -652,7 +652,7 @@ ul {
 }
 
 .restaurant img {
-	width: 100px;
+	width: 120px;
 	margin-bottom: 5px;
 }
 

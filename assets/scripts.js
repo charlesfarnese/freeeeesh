@@ -92,6 +92,13 @@ $(".itemtype_title").click( function () {
 
 // ADD TO BASKET (+)
 $(".plus_container").click( function () {
+
+    if ($("#basket").css("display") === "none") {
+                if ($(window).width() > 660) {
+                    $("#basket").css("display", "block");
+                    $('#basket_link').fadeIn(1000).css("display","none");
+                }
+            }
 	
 	// get product
     var product = $(this).parent().data("product");
@@ -198,6 +205,14 @@ $(".plus_container").click( function () {
 
 // REMOVE FROM BASKET (MINUS)
 $(".minus_container").click( function () {
+
+    if ($("#basket").css("display") === "none") {
+                if ($(window).width() > 660) {
+                    $("#basket").css("display", "block");
+                    $('#basket_link').fadeIn(1000).css("display","none");
+                }
+            }
+
 	// get product
     var product = $(this).parent().data("product");
     console.log("product: " + product);
@@ -312,6 +327,13 @@ $(".minus_container").click( function () {
 // REMOVE FROM BASKET (X)
 $("body").on( "click", ".basket_group-itemline-clear", function() {
 
+    if ($("#basket").css("display") === "none") {
+                if ($(window).width() > 660) {
+                    $("#basket").css("display", "block");
+                    $('#basket_link').fadeIn(1000).css("display","none");
+                }
+            }
+
     console.log("clicked!");
 
     // Get restaurant group
@@ -407,6 +429,13 @@ $('.itemgroup').on('mouseenter', function() {
 
 // ADD TO BASKET (title)
 $(".itemtype_title").click( function () {
+
+    if ($("#basket").css("display") === "none") {
+                if ($(window).width() > 660) {
+                    $("#basket").css("display", "block");
+                    $('#basket_link').fadeIn(1000).css("display","none");
+                }
+            }
     
     // get product
     var product = $(this).siblings(".price_line").first().data("product");
@@ -510,6 +539,13 @@ $(".itemtype_title").click( function () {
 
 // Add to basket via itemlist
 $(".itemlist").click( function () {
+
+    if ($("#basket").css("display") === "none") {
+                if ($(window).width() > 660) {
+                    $("#basket").css("display", "block");
+                    $('#basket_link').fadeIn(1000).css("display","none");
+                }
+            }
     
     // get product
     var product = $(this).parent().data("product");

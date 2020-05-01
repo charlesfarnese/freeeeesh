@@ -511,7 +511,7 @@ ul {
 
 .menu {
 	/*height: calc(100vh - 110px);*/
-	height: 100%;
+	height: 100vh;
 	width: 50%;
 	padding: 0 20px 20px 20px;
 	border-right: 1px solid #000000;
@@ -921,4 +921,10 @@ ul {
 		display: block;
 	}
 
+}
+
+@media only screen and (max-width: 900px) {
+	.menu {
+		height: 100%;
+	}
 }

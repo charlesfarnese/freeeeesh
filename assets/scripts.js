@@ -79,6 +79,28 @@ $("#box_scroll-container").click(function() {
     }, 1000);
 });
 
+//logo scroll 
+$('.suppliers_line img').click(function() {
+
+
+    var imageFileAddr = $(this).attr('src');
+    console.log(imageFileAddr);
+    var imageFile = imageFileAddr.split('assets/images/')[1];
+    var restaurant = imageFile.split('.png')[0];
+
+    console.log(restaurant);
+
+
+
+    $('html, body').animate({
+        scrollTop: $('#' + restaurant + '_menu').offset().top
+    }, 1000);
+
+
+
+
+});
+
 
 
 // UPDATE CART ON CLICK

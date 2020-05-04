@@ -7,6 +7,21 @@ $( document ).ready(function() {
     if (basketCount === 0) {
       $('#checkout_button').css('display', 'none');
     }
+
+    //Sticky tits
+stickybits('#panel_head_sticky', {stickyBitStickyOffset: 0}, {scrollEl: 'box_scroll-target'});
+stickybits('#first_col-container', {stickyBitStickyOffset: 40}, {scrollEl: 'left-col'});
+if ($(window).width() > 660) {
+    $('.restaurant_logo').css('position', 'relative').css('top', 'auto');
+    stickybits('.menu', {stickyBitStickyOffset: 110}, {scrollEl: 'split-columns'});
+}
+
+
+if ($(window).width() <= 660) {
+    $('.menu').css('position', 'relative').css('top', 'auto');
+    stickybits('.restaurant_logo', {stickyBitStickyOffset: 110}, {scrollEl: 'menu-inner'});
+}
+
 });
 
 // curve next delivery text
@@ -23,7 +38,7 @@ $(document).ready(function(){
 
             if ($("#basket").css("display") === "block") {
                 $("#basket").css("display", "none");
-                if ($(window).width() >= 660) {
+                if ($(window).width() > 660) {
                     $('#basket_link').fadeIn(1000).css("display","block");
                 }
             }
@@ -684,7 +699,16 @@ $(".itemlist").click( function () {
   }
 );
 
-//Sticky tits
-stickybits('#panel_head_sticky', {stickyBitStickyOffset: 0}, {scrollEl: 'box_scroll-target'});
-stickybits('#first_col-container', {stickyBitStickyOffset: 40}, {scrollEl: 'left-col'});
-stickybits('.menu', {stickyBitStickyOffset: 110}, {scrollEl: 'split-columns'});
+$( window ).resize(function() {
+    if ($(window).width() > 660) {
+        $('.restaurant_logo').css('position', 'relative').css('top', 'auto');
+        stickybits('.menu', {stickyBitStickyOffset: 110}, {scrollEl: 'split-columns'});
+    }
+
+
+    if ($(window).width() <= 660) {
+        $('.menu').css('position', 'relative').css('top', 'auto');
+        stickybits('.restaurant_logo', {stickyBitStickyOffset: 110}, {scrollEl: 'menu-inner'});
+    }
+});
+

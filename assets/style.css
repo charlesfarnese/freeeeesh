@@ -938,6 +938,8 @@ a:visited {
 	}
 
 	.restaurant_logo {
+		top: 110px;
+		position: sticky;
 		background-color: #ffffff;
 		text-align: center;
   	padding: 20px 0;

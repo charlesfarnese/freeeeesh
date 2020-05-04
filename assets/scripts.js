@@ -2,6 +2,11 @@ $( document ).ready(function() {
     // get basket count from number of itemlines
     var basketCount = $('.basket_group-itemline').length;
     $(".basket_link-count").text(basketCount);
+
+    // if basket count is 0, dont show checkout button
+    if (basketCount === 0) {
+      $('#checkout_button').css('display', 'none');
+    }
 });
 
 // curve next delivery text
@@ -11,14 +16,14 @@ new CircleType(document.getElementById('next_delivery-date'))
   new CircleType(document.getElementById('next_delivery-date-mobile'))
   .radius(60);
 
-
+// hide the basket on scroll event
 $(document).ready(function(){
     document.addEventListener('scroll', function(event) {
         var basket = document.getElementById("basket");
 
             if ($("#basket").css("display") === "block") {
                 $("#basket").css("display", "none");
-                if ($(window).width() > 660) {
+                if ($(window).width() >= 660) {
                     $('#basket_link').fadeIn(1000).css("display","block");
                 }
             }
@@ -26,22 +31,7 @@ $(document).ready(function(){
     });
 });
 
-// document.addEventListener('click', function(event) {
-//         var basket = document.getElementById("basket");
-//         var basketLink = document.getElementById("basket_link");
-//         var clearItem = document.getElementsByClassName("basket_group-itemline-clear")
-//         var clickInBasket = basket.contains(event.target);
-//         var clickInBasketLink = basketLink.contains(event.target);
-//         var clickClearItem = clearItem.contains(event.target);
-
-//             if (!clickInBasket && !clickInBasketLink && !clickClearItem && $("#basket").css("display") === "block" && $("#basket").css("position") === "fixed") {
-//                 $("#basket").css("display", "none");
-//                 $('#basket_link').fadeIn(1000).css("display","block");
-//             }
-
-//     });
-
-// basket fade in
+// basket fade in on link click
 $(document).ready(function(){
     $('#basket_link').click(function() {
         console.log($(window).width());
@@ -52,7 +42,7 @@ $(document).ready(function(){
     });
 });
 
-// basket fade out
+// basket fade out on inner link click
 $(document).ready(function(){
     $('#basket_link-inner').click(function() {
           $('#basket_link-inner').css("display","none");
@@ -63,7 +53,7 @@ $(document).ready(function(){
     });
 });
 
-//mobile basket open 
+//mobile basket open on mobile link click
 $(document).ready(function(){
     $('#basket_link_mobile').click(function() {
             $('#left-col').css("visibility","visible");
@@ -72,16 +62,15 @@ $(document).ready(function(){
     });
 });
 
-// box scroll
+// smooth scroll to box menu on clicking 'boxes ->'
 $("#box_scroll-container").click(function() {
     $('html, body').animate({
         scrollTop: $("#box_scroll-target").offset().top
     }, 1000);
 });
 
-//logo scroll 
+// on clecking logos in intro section, scroll to their menu
 $('.suppliers_line img').click(function() {
-
 
     var imageFileAddr = $(this).attr('src');
     console.log(imageFileAddr);
@@ -97,20 +86,11 @@ $('.suppliers_line img').click(function() {
     }, 1000);
 
 
-
-
 });
 
 
 
-// UPDATE CART ON CLICK
-
-//ADD TO BASKET (TITLE)
-$(".itemtype_title").click( function () {
-
-
-
-});
+// ------------ UPDATING CART ----------------
 
 // ADD TO BASKET (+)
 $(".plus_container").click( function () {
@@ -121,7 +101,7 @@ $(".plus_container").click( function () {
                     $('#basket_link').fadeIn(1000).css("display","none");
                 }
             }
-	
+
 	// get product
     var product = $(this).parent().data("product");
     console.log("product: " + product);
@@ -133,7 +113,7 @@ $(".plus_container").click( function () {
     // get restaurant
     var restaurant = $(this).parent().data("restaurant");
     console.log("restaurant: " + restaurant);
-    
+
     // get current product count
     //  will get from cart api
 
@@ -144,7 +124,7 @@ $(".plus_container").click( function () {
     //get basket groups
     var basketGroups = $(".basket_group");
 
-    
+
     // Check if restaurant in has group already
     var restaurantInBasket = false;
 
@@ -172,7 +152,7 @@ $(".plus_container").click( function () {
     }
 
     //update/create itemcount div
-    // new restaurant group list 
+    // new restaurant group list
     var restaurantItemList = $('.basket_group[data-restaurant="' + restaurant + '"').find(".basket_group-itemline-title");
 
     //filter list for this product
@@ -209,6 +189,13 @@ $(".plus_container").click( function () {
     var basketCount = $('.basket_group-itemline').length;
     $(".basket_link-count").text(basketCount);
 
+    // if basket count is 0, dont show checkout button
+    if (basketCount === 0) {
+      $('#checkout_button').css('display', 'none');
+    } else {
+      $('#checkout_button').css('display', 'block');
+    }
+
 
     // update basket total price
     var itemLinesPrices = $("#basket").find(".basket_group-itemline-cost-number");
@@ -221,7 +208,7 @@ $(".plus_container").click( function () {
     console.log(total);
     $("#basket_total-number").text(total);
 
- 	
+
   }
 );
 
@@ -271,13 +258,13 @@ $(".minus_container").click( function () {
     	// Get all itemlines for restaurant
     	var itemLines = $(restaurantGroup).find(".basket_group-itemline-title");
 
-    	
+
 
     	// filter for product in question and remove
     	$(itemLines).each(function(index, element){
     		console.log($(this).text());
 
-    		
+
 	    	if ($(this).text() == product) {
 
 	    		//if last in restaurant group, remove whole group, else just line
@@ -295,7 +282,7 @@ $(".minus_container").click( function () {
     }
 
     //update/create itemcount div
-    // new restaurant group list 
+    // new restaurant group list
     var restaurantItemList = $('.basket_group[data-restaurant="' + restaurant + '"').find(".basket_group-itemline-title");
 
     //filter list for this product
@@ -316,7 +303,7 @@ $(".minus_container").click( function () {
 
             $(countDiv).text(restaurantItemListFiltered.length);
 
-        } 
+        }
 
     } else {
 
@@ -344,6 +331,13 @@ $(".minus_container").click( function () {
     var basketCount = $('.basket_group-itemline').length;
     $(".basket_link-count").text(basketCount);
 
+    // if basket count is 0, dont show checkout button
+    if (basketCount === 0) {
+      $('#checkout_button').css('display', 'none');
+    } else {
+      $('#checkout_button').css('display', 'block');
+    }
+
 });
 
 // REMOVE FROM BASKET (X)
@@ -364,17 +358,17 @@ $("body").on( "click", ".basket_group-itemline-clear", function() {
 
     var restaurant = $(this).parent().parent().data("restaurant");
     var product = $(this).siblings(".basket_group-itemline-title").first().text();
-    
+
     // Get all itemlines for restaurant
     var itemLines = $(restaurantGroup).find(".basket_group-itemline-title");
-    
+
     //this itemline
     var itemLine = $(this).parent()
     console.log(itemLine);
 
     if ($(itemLines).length == 1) {
         $(restaurantGroup).remove();
-        
+
     } else if ($(itemLines).length > 1) {
         $(itemLine).remove();
     }
@@ -383,7 +377,7 @@ $("body").on( "click", ".basket_group-itemline-clear", function() {
 
 
     //update/create itemcount div
-    // new restaurant group list 
+    // new restaurant group list
     var restaurantItemList = $('.basket_group[data-restaurant="' + restaurant + '"').find(".basket_group-itemline-title");
 
     //filter list for this product
@@ -404,7 +398,7 @@ $("body").on( "click", ".basket_group-itemline-clear", function() {
 
             $(countDiv).text(restaurantItemListFiltered.length);
 
-        } 
+        }
 
     } else {
 
@@ -432,6 +426,13 @@ $("body").on( "click", ".basket_group-itemline-clear", function() {
     var basketCount = $('.basket_group-itemline').length;
     $(".basket_link-count").text(basketCount);
 
+    // if basket count is 0, dont show checkout button
+    if (basketCount === 0) {
+      $('#checkout_button').css('display', 'none');
+    } else {
+      $('#checkout_button').css('display', 'block');
+    }
+
 
 });
 
@@ -442,7 +443,7 @@ $('.itemgroup').on('mouseenter', function() {
     $(this).find(".minus_container").css("visibility", "visible");
     $(this).find(".plus_container").css("visibility", "visible");
     console.log("hit");
-       // do something           
+       // do something
 
 }).on('mouseleave', function() {
     $(this).find(".minus_container").css("visibility", "hidden");
@@ -458,7 +459,7 @@ $(".itemtype_title").click( function () {
                     $('#basket_link').fadeIn(1000).css("display","none");
                 }
             }
-    
+
     // get product
     var product = $(this).siblings(".price_line").first().data("product");
 
@@ -467,7 +468,7 @@ $(".itemtype_title").click( function () {
 
     // get restaurant
     var restaurant = $(this).siblings(".price_line").first().data("restaurant");
-    
+
     // get current product count
     //  will get from cart api
 
@@ -478,7 +479,7 @@ $(".itemtype_title").click( function () {
     //get basket groups
     var basketGroups = $(".basket_group");
 
-    
+
     // Check if restaurant in has group already
     var restaurantInBasket = false;
 
@@ -506,7 +507,7 @@ $(".itemtype_title").click( function () {
     }
 
     //update/create itemcount div
-    // new restaurant group list 
+    // new restaurant group list
     var restaurantItemList = $('.basket_group[data-restaurant="' + restaurant + '"').find(".basket_group-itemline-title");
 
     //filter list for this product
@@ -544,6 +545,13 @@ $(".itemtype_title").click( function () {
     var basketCount = $('.basket_group-itemline').length;
     $(".basket_link-count").text(basketCount);
 
+    // if basket count is 0, dont show checkout button
+    if (basketCount === 0) {
+      $('#checkout_button').css('display', 'none');
+    } else {
+      $('#checkout_button').css('display', 'block');
+    }
+
 
     // update basket total price
     var itemLinesPrices = $("#basket").find(".basket_group-itemline-cost-number");
@@ -555,7 +563,7 @@ $(".itemtype_title").click( function () {
 
     $("#basket_total-number").text(total);
 
-    
+
   }
 );
 
@@ -568,7 +576,7 @@ $(".itemlist").click( function () {
                     $('#basket_link').fadeIn(1000).css("display","none");
                 }
             }
-    
+
     // get product
     var product = $(this).parent().data("product");
 
@@ -577,7 +585,7 @@ $(".itemlist").click( function () {
 
     // get restaurant
     var restaurant = $(this).parent().data("restaurant");
-    
+
     // get current product count
     //  will get from cart api
 
@@ -588,7 +596,7 @@ $(".itemlist").click( function () {
     //get basket groups
     var basketGroups = $(".basket_group");
 
-    
+
     // Check if restaurant in has group already
     var restaurantInBasket = false;
 
@@ -616,7 +624,7 @@ $(".itemlist").click( function () {
     }
 
     //update/create itemcount div
-    // new restaurant group list 
+    // new restaurant group list
     var restaurantItemList = $('.basket_group[data-restaurant="' + restaurant + '"').find(".basket_group-itemline-title");
 
     //filter list for this product
@@ -654,6 +662,13 @@ $(".itemlist").click( function () {
     var basketCount = $('.basket_group-itemline').length;
     $(".basket_link-count").text(basketCount);
 
+    // if basket count is 0, dont show checkout button
+    if (basketCount === 0) {
+      $('#checkout_button').css('display', 'none');
+    } else {
+      $('#checkout_button').css('display', 'block');
+    }
+
 
     // update basket total price
     var itemLinesPrices = $("#basket").find(".basket_group-itemline-cost-number");
@@ -665,7 +680,7 @@ $(".itemlist").click( function () {
 
     $("#basket_total-number").text(total);
 
-    
+
   }
 );
 
@@ -673,21 +688,3 @@ $(".itemlist").click( function () {
 stickybits('#panel_head_sticky', {stickyBitStickyOffset: 0}, {scrollEl: 'box_scroll-target'});
 stickybits('#first_col-container', {stickyBitStickyOffset: 40}, {scrollEl: 'left-col'});
 stickybits('.menu', {stickyBitStickyOffset: 110}, {scrollEl: 'split-columns'});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

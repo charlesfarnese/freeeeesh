@@ -19,7 +19,7 @@ if ($(window).width() > 660) {
 
 if ($(window).width() <= 660) {
     $('.menu').css('position', 'relative').css('top', 'auto');
-    stickybits('.restaurant_logo', {stickyBitStickyOffset: 110}, {scrollEl: 'menu-inner'});
+    stickybits('.restaurant_logo', {stickyBitStickyOffset: 92}, {scrollEl: 'menu-inner'});
 }
 
 if ($(window).width() > 1190) {
@@ -775,7 +775,7 @@ $( window ).resize(function() {
 
     if ($(window).width() <= 660) {
         $('.menu').css('position', 'relative').css('top', 'auto');
-        stickybits('.restaurant_logo', {stickyBitStickyOffset: 110}, {scrollEl: 'menu-inner'});
+        stickybits('.restaurant_logo', {stickyBitStickyOffset: 92}, {scrollEl: 'menu-inner'});
     }
 });
 

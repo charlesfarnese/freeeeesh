@@ -101,6 +101,12 @@ if ($(window).width() > 1190) {
         new CircleType(document.getElementById('next_delivery-date-mobile')).radius(60);
     }
 }
+
+if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
+{
+  $("#next_delivery-container").css('display', 'none');
+  $("#next_delivery-container-mobile").css('display', 'none');
+}
 });
 
 // hide the basket on scroll event

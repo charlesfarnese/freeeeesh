@@ -410,6 +410,17 @@ a:visited {
     left: 50%;
 }
 
+#next_delivery {
+	text-align: center;
+	position: absolute;
+	top: 30px;
+	left: -28px;
+}
+
+#next_delivery-mobile {
+	text-align: center;
+}
+
 #basket_container {
 	position: relative;
 }
@@ -807,7 +818,6 @@ a:visited {
 
 @media only screen and (max-width: 1190px) {
 
-	#next_delivery-container,
 	#info-container {
 		display: none;
 	}

@@ -22,14 +22,81 @@ if ($(window).width() <= 660) {
     stickybits('.restaurant_logo', {stickyBitStickyOffset: 110}, {scrollEl: 'menu-inner'});
 }
 
+if ($(window).width() > 1190) {
+
+    var nextDeliveryContainer = $('<div id="next_delivery-container"></div>');
+    var nextDeliveryText = $('<div id="next_delivery-text"></div>');
+    var nextDeliveryDate = $('<div id="next_delivery-date">18th of April</div>');
+    var nextDelivery = $('<div id="next_delivery">next<br>delivery</div>');
+
+    $('#first_col-container').prepend(nextDeliveryContainer);
+    $('#next_delivery-container').append(nextDeliveryText);
+    $('#next_delivery-text').append(nextDeliveryDate);
+    $('#next_delivery-text').append(nextDelivery);
+
+
+    // curve next delivery text
+    new CircleType(document.getElementById('next_delivery-date')).radius(60);
+
+} 
+
+if ($(window).width() <= 660) {
+    var nextDeliveryContainerMobile = $('<div id="next_delivery-container-mobile"></div>');
+    var nextDeliveryTextMobile = $('<div id="next_delivery-text-mobile"></div>');
+    var nextDeliveryDateMobile = $('<div id="next_delivery-date-mobile">18th of April</div>');
+    var nextDeliveryMobile = $('<div id="next_delivery-mobile">next<br>delivery</div>');
+
+    $('#initial_content-mobile').prepend(nextDeliveryContainerMobile);
+    $('#next_delivery-container-mobile').append(nextDeliveryTextMobile);
+    $('#next_delivery-text-mobile').append(nextDeliveryDateMobile);
+    $('#next_delivery-text-mobile').append(nextDeliveryMobile);
+
+    new CircleType(document.getElementById('next_delivery-date-mobile')).radius(60);
+}
+
 });
 
-// curve next delivery text
-new CircleType(document.getElementById('next_delivery-date'))
-  .radius(60);
+//insert and remove next delivery text depending on screen size (on resize)
+$( window ).resize(function() {
+if ($(window).width() > 1190) {
 
-  new CircleType(document.getElementById('next_delivery-date-mobile'))
-  .radius(60);
+    if ($('#next_delivery-container').length === 0) {
+        var nextDeliveryContainer = $('<div id="next_delivery-container"></div>');
+        var nextDeliveryText = $('<div id="next_delivery-text"></div>');
+        var nextDeliveryDate = $('<div id="next_delivery-date">18th of April</div>');
+        var nextDelivery = $('<div id="next_delivery">next<br>delivery</div>');
+
+        $('#first_col-container').prepend(nextDeliveryContainer);
+        $('#next_delivery-container').append(nextDeliveryText);
+        $('#next_delivery-text').append(nextDeliveryDate);
+        $('#next_delivery-text').append(nextDelivery);
+
+
+        // curve next delivery text
+        new CircleType(document.getElementById('next_delivery-date')).radius(60);
+    }
+
+} else if ( $(window).width() > 660 && $(window).width() <= 1190){
+    $('#next_delivery-container').remove();
+    $('#next_delivery-container-mobile').remove();
+
+} else {
+
+    if ($('#next_delivery-container-mobile').length === 0) {
+        var nextDeliveryContainerMobile = $('<div id="next_delivery-container-mobile"></div>');
+        var nextDeliveryTextMobile = $('<div id="next_delivery-text-mobile"></div>');
+        var nextDeliveryDateMobile = $('<div id="next_delivery-date-mobile">18th of April</div>');
+        var nextDeliveryMobile = $('<div id="next_delivery-mobile">next<br>delivery</div>');
+
+        $('#initial_content-mobile').prepend(nextDeliveryContainerMobile);
+        $('#next_delivery-container-mobile').append(nextDeliveryTextMobile);
+        $('#next_delivery-text-mobile').append(nextDeliveryDateMobile);
+        $('#next_delivery-text-mobile').append(nextDeliveryMobile);
+
+        new CircleType(document.getElementById('next_delivery-date-mobile')).radius(60);
+    }
+}
+});
 
 // hide the basket on scroll event
 $(document).ready(function(){

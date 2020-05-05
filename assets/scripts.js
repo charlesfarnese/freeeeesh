@@ -8,18 +8,16 @@ $( document ).ready(function() {
       $('#checkout_button').css('display', 'none');
     }
 
-    //Sticky tits
-stickybits('#panel_head_sticky', {stickyBitStickyOffset: 0}, {scrollEl: 'box_scroll-target'});
-stickybits('#first_col-container', {stickyBitStickyOffset: 40}, {scrollEl: 'left-col'});
+
 if ($(window).width() > 660) {
-    $('.restaurant_logo').css('position', 'relative').css('top', 'auto');
-    stickybits('.menu', {stickyBitStickyOffset: 110}, {scrollEl: 'split-columns'});
+    $('.restaurant_logo').css({'position': 'relative', 'top': 'auto'});
+    $('.menu').css({'position': 'sticky', 'top': '110px'});
 }
 
 
 if ($(window).width() <= 660) {
-    $('.menu').css('position', 'relative').css('top', 'auto');
-    stickybits('.restaurant_logo', {stickyBitStickyOffset: 92}, {scrollEl: 'menu-inner'});
+    $('.menu').css({'position': 'relative', 'top': 'auto'});
+    $('.restaurant_logo').css({'position': 'sticky', 'top': '92px'});
 }
 
 if ($(window).width() > 1190) {
@@ -768,14 +766,21 @@ $(".itemlist").click( function () {
 
 $( window ).resize(function() {
     if ($(window).width() > 660) {
-        $('.restaurant_logo').css('position', 'relative').css('top', 'auto');
-        stickybits('.menu', {stickyBitStickyOffset: 110}, {scrollEl: 'split-columns'});
+        $('.restaurant_logo').css({'position': 'relative', 'top': 'auto'});
+        $('.menu').css({'position': 'sticky', 'top': '110px'});
     }
 
 
     if ($(window).width() <= 660) {
-        $('.menu').css('position', 'relative').css('top', 'auto');
-        stickybits('.restaurant_logo', {stickyBitStickyOffset: 92}, {scrollEl: 'menu-inner'});
+        $('.menu').css({'position': 'relative', 'top': 'auto'});
+        $('.restaurant_logo').css({'position': 'sticky', 'top': '92px'});
     }
 });
+
+// Internet explorer fixes 
+if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
+{
+  $("#next_delivery-container").css('display', 'none');
+  $("#next_delivery-container-mobile").css('display', 'none');
+}
 

@@ -349,6 +349,7 @@ a:visited {
 }
 
 #box_scroll-container {
+	-ms-writing-mode: tb-rl;
 	writing-mode: vertical-rl;
 	-webkit-text-orientation: upright;
 	text-orientation: upright;
@@ -379,6 +380,8 @@ a:visited {
 /* Start basket and next delivery */
 
 #first_col-container {
+	position: sticky;
+	top: 40px;
 	flex-direction: column;
     display: flex;
 }
@@ -432,6 +435,7 @@ a:visited {
 #basket_link,
 #basket_inner-link {
 	transform: rotate(-180deg);
+	-ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     float:right;
     font-size: 20px;
@@ -579,6 +583,8 @@ a:visited {
 }
 
 #panel_head_sticky {
+	position: sticky;
+	top: 0;
 	padding: 24px 0;
 	z-index:1;
 	background-color: #ffffff;

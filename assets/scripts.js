@@ -52,6 +52,13 @@ if ($(window).width() <= 660) {
     new CircleType(document.getElementById('next_delivery-date-mobile')).radius(60);
 }
 
+// Internet explorer fixes 
+if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
+{
+  $("#next_delivery-container").css('display', 'none');
+  $("#next_delivery-container-mobile").css('display', 'none');
+}
+
 });
 
 //insert and remove next delivery text depending on screen size (on resize)
@@ -777,10 +784,5 @@ $( window ).resize(function() {
     }
 });
 
-// Internet explorer fixes 
-if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
-{
-  $("#next_delivery-container").css('display', 'none');
-  $("#next_delivery-container-mobile").css('display', 'none');
-}
+
 

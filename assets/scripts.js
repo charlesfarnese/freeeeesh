@@ -786,7 +786,7 @@ $( window ).resize(function() {
 
     if ($(window).width() <= 660) {
         $('.menu').css({'position': 'relative', 'top': 'auto'});
-        $('.restaurant_logo').css({'position': 'sticky', 'top': '92px'});
+        $('.restaurant_logo').css({'position': 'sticky', 'top': '110px'});
     }
 });
 
